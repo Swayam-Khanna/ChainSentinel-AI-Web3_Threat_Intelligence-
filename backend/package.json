@@ -1,0 +1,29 @@
+{
+  "name": "chainsentinel-backend",
+  "version": "1.0.0",
+  "description": "ChainSentinel - AI-Powered Web3 Exploit Detection Backend",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "simulate": "node src/simulate.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.4.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.5.0",
+    "mongoose-paginate-v2": "^1.9.4",
+    "morgan": "^1.10.1",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
