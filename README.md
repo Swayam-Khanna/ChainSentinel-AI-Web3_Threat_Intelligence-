@@ -51,14 +51,5 @@ npm run dev
 
 This project is built for high-scale collaborative security research. 
 
-**Main Contributor:** [rajat020-cloud](https://github.com/rajat020-cloud)
-
-### 🤝 How to Collaborate
-1. **Invite Team Members**: Go to `Settings > Collaborators` on the GitHub repository and add your teammate's username.
-2. **Branching Strategy**:
-   - `main`: Production-ready code.
-   - `dev`: Active feature development.
-3. **Feature Requests**: Open an Issue to discuss new security vectors or detection logic.
-
 ---
 *Built with ❤️ for a safer Web3.*
