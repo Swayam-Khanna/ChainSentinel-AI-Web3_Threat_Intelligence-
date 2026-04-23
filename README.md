@@ -1,42 +1,64 @@
-# 🛡️ ChainSentinel: Production-Grade Web3 Exploit Detection
+# 🛡️ ChainSentinel | AI-Powered Web3 Security Intelligence
 
-ChainSentinel is a full-stack, real-time Ethereum mempool monitoring and threat intelligence platform. Built for scalability and reliability.
+ChainSentinel is a production-grade Web3 security platform designed to monitor the Ethereum mempool in real-time. It utilizes a hybrid detection engine combining deterministic heuristics with Machine Learning (Isolation Forest) to identify and mitigate front-running, sandwich attacks, and gas manipulation in real-time.
 
-## 🏗️ Architecture
-- **Frontend**: React + TypeScript + Tailwind v4 + Framer Motion.
-- **Backend**: Node.js + Express + WebSocket Server.
-- **Persistence**: MongoDB (Mongoose) for historical alerts.
-- **Engine**: Dual-layer detection (Heuristics + Streaming Isolation Forest).
+![ChainSentinel Dashboard](screenshots/dashboard.png)
 
-## 🚀 Quick Start (Local)
-1.  **Database**: Start MongoDB locally or use a MongoDB Atlas URI in `.env`.
-2.  **Backend**:
-    ```bash
-    cd backend
-    npm install
-    npm run dev
-    ```
-3.  **Frontend**:
-    ```bash
-    cd frontend
-    npm install
-    npm run dev
-    ```
+## 🚀 Key Features
 
-## 🌍 Deployment
-### Backend (Railway / Render / Heroku)
-- Set `MONGODB_URI` and `ETH_WS_URL` in environment variables.
-- Ensure the port is correctly mapped.
+- **Real-Time Mempool Analysis**: Streams live transactions directly from the peer-to-peer network layer.
+- **AI Threat Detection**: Uses Isolation Forest ML models to detect anomalous transaction patterns.
+- **Multi-Vector Security**: Specialized detection for Sandwich Attacks, Gas Spikes, and Contract Bursts.
+- **Active Defense Relay**: One-click mitigation to protect contracts from identified threats.
+- **Premium Dashboard**: Futuristic, data-rich interface built with React, Tailwind v4, and Framer Motion.
+- **Responsive Architecture**: Fully optimized for Desktop, Tablet, and Mobile devices.
 
-### Frontend (Vercel / Netlify)
-- Set `VITE_API_URL` and `VITE_WS_URL` to point to your deployed backend.
-- Build command: `npm run build`.
+## 🛠️ Technical Stack
 
-## 🧪 Simulation Suite
-Use the **Security Simulation** panel in the dashboard to trigger:
-- **Sandwich Attack**: MEV bot simulation.
-- **Gas Spike**: Sudden 10x gas increase detection.
-- **Contract Burst**: Rapid reentrancy-style attack patterns.
+- **Frontend**: React 18, TypeScript, Tailwind CSS v4, Framer Motion, Recharts.
+- **Backend**: Node.js, Express, WebSocket (ws), Ethers.js.
+- **ML Engine**: Custom Isolation Forest implementation for real-time anomaly scoring.
+- **Database**: MongoDB (Mongoose) for persistent alert logging and historical analysis.
+
+## 📦 Installation & Setup
+
+### 1. Prerequisites
+- Node.js (v18+)
+- MongoDB (Optional, falls back to ephemeral mode)
+- An Ethereum RPC Provider (Alchemy/Infura) for Mainnet data.
+
+### 2. Clone and Install
+```bash
+git clone https://github.com/rajat020-cloud/ChainSentinel.git
+cd ChainSentinel
+```
+
+### 3. Start Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+### 4. Start Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## 👥 Collaboration & Team
+
+This project is built for high-scale collaborative security research. 
+
+**Main Contributor:** [rajat020-cloud](https://github.com/rajat020-cloud)
+
+### 🤝 How to Collaborate
+1. **Invite Team Members**: Go to `Settings > Collaborators` on the GitHub repository and add your teammate's username.
+2. **Branching Strategy**:
+   - `main`: Production-ready code.
+   - `dev`: Active feature development.
+3. **Feature Requests**: Open an Issue to discuss new security vectors or detection logic.
 
 ---
-*Production system built for high-throughput blockchain analysis.*
+*Built with ❤️ for a safer Web3.*
